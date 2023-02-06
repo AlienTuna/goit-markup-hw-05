@@ -33,8 +33,7 @@
 body {
    font-family: var(--main-font), sans-serif;
    color: var(--main-txt);
-   width: 1440px;
-}
+   }
 
 ul,
 li,
@@ -140,6 +139,9 @@ img {
    flex-direction: column;
    align-items: center;
    gap: 48px;
+   max-width: 1440px;
+   margin-left: auto;
+   margin-right: auto;
 }
 
 .hero-header {
@@ -417,6 +419,8 @@ img {
 .filter-button:hover,
 .filter-button:focus {
    color: var(--white);
+   border-color: var(--hoover-focus);
+   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 
@@ -449,9 +453,12 @@ img {
 
 .about-us-card {
    margin-bottom: 8px;
-   padding: 24px 100px;
    background-color: var(--second-light-bg);
    border-radius: 4px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 112px;
 }
 
 .about-us-item-icon {
@@ -498,11 +505,13 @@ img {
 
 .customers-list-link {
    display: flex;
+   justify-content: center;
    align-items: center;
    border: 1px solid currentColor;
    color: var(--icon-border);
    border-radius: 4px;
-   padding: 16px 32px;
+   height: 100%;
+   width: 100%;
 }
 .customers-list-link:hover,
 .customers-list-link:focus {
@@ -510,6 +519,10 @@ img {
 }
 .customers-list-icon{
    fill: currentColor;
+}
+.customers-list-item {
+   height: 88px;
+   width: 168px;
 }
 
 .footer-wrapper {
@@ -538,7 +551,11 @@ img {
    background: var(--hover-focus-dark-theme);
 }
 
-.portfolio-item:hover {
+.portfolio-link:hover,
+.portfolio-link:focus {
    cursor: pointer;
    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+.portfolio-link {
+   display: block;
 }
